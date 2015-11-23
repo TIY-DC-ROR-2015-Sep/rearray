@@ -1,4 +1,5 @@
 require "spec_helper"
+require "pry"
 require_relative "../rearray"
 
 describe Rearray do
