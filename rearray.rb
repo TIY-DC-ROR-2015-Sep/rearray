@@ -34,6 +34,26 @@ class Rearray
     count
   end
 
+  def index needle
+    curr  = @start
+    count = 0
+    while curr != @last
+      # What if it's in curr?
+      if curr.value == needle
+        return count
+      end
+      curr = curr.next
+      count += 1
+    end
+
+    if curr.value == needle
+      return count
+    else
+      # Not in the array
+      return nil
+    end
+  end
+
   def first
     @start.value
   end

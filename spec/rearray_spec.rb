@@ -35,7 +35,8 @@ describe Rearray do
     When { arr.push :b }
     When { arr.push :c }
 
-    Then { arr.index(:c) == 2   }
+    Then { arr.index(:a) == 0   }
+    And  { arr.index(:c) == 2   }
     And  { arr.index(:z) == nil }
   end
 
